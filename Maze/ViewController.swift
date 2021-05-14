@@ -19,9 +19,9 @@ class ViewController: UIViewController {
         [0, 0, 0, 1, 1, 0],
         [0, 0, 1, 0, 0, 0],
         [0, 1, 1, 0, 1, 0],
-        [0, 0, 0, 0, 1, 0],
-        [0, 1, 1, 0, 0, 0],
-        [0, 0, 4, 0, 0, 2],
+        [0, 0, 4, 0, 1, 0],
+        [1, 1, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 2],
     ]
     var playerView: UIView!
     var playerMotionManager: CMMotionManager!
@@ -62,11 +62,10 @@ class ViewController: UIViewController {
                     speedUpView = creatView(x: x, y: y, width: cellWidth, height: cellHeight, offsetX: cellOffsetX, offsetY: cellOffsetY)
                     speedUpView.backgroundColor = UIColor.yellow
                     let lb = UILabel(frame: CGRect(x:0, y: 0, width: speedUpView.frame.width, height: speedUpView.frame.height))
-                    lb.text = "speedUp"
+                    lb.text = "加速"
                     lb.textColor = UIColor.black
                     lb.textAlignment = .center
                     lb.numberOfLines = 0
-                    lb.center = speedUpView.center
                     speedUpView.addSubview(lb)
                     view.addSubview(speedUpView)
                     
